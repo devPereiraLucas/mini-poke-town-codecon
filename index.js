@@ -13,7 +13,9 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
-io.on('connection', (socket) => {})
+io.on('connection', (socket) => {
+  console.log('a user connected')
+})
 
 server.listen(serverPort, () => {
   console.log(`listening on *: ${serverPort}`)
