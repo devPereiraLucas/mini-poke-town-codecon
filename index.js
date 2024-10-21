@@ -7,6 +7,8 @@ const serverPort = 3000
 const { Server } = require('socket.io')
 const io = new Server(server)
 
+app.use("/public", express.static("public", {}))
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
